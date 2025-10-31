@@ -22,7 +22,6 @@ api.interceptors.request.use(async (config) => {
       });
 
       token = Cookies.get("XSRF-TOKEN");
-      console.log(`✅ Fetched CSRF token: ${token}`);
     } catch (err) {
       console.error("❌ Failed to fetch CSRF cookie:", err);
     }
