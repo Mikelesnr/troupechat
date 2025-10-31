@@ -37,8 +37,17 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const logout = () => {
     api.post("/logout");
-    setUser(null);
+
+    // Clear localStorage
     localStorage.removeItem("user");
+    setUser(null);
+
+    // ✅ Manually clear Laravel cookies
+    document.cookie.split(";").forEach((c) => {
+      document.cookie = c
+        .replace(/^ +/, "")
+        .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+    });
   };
 
   return (
