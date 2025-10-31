@@ -14,6 +14,7 @@ export default function RegisterPage() {
     email: "",
     password: "",
     password_confirmation: "",
+    role: "trouper",
   });
   const [error, setError] = useState("");
 
