@@ -1,10 +1,8 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-
 const api = axios.create({
-  baseURL: API_BASE,
+  baseURL: "/api", // ✅ proxy path
   withCredentials: true,
   headers: {
     Accept: "application/json",
@@ -16,7 +14,7 @@ api.interceptors.request.use(async (config) => {
 
   if (!token) {
     try {
-      await axios.get(`${API_BASE}/sanctum/csrf-cookie`, {
+      await axios.get("/api/sanctum/csrf-cookie", {
         withCredentials: true,
         headers: {
           Accept: "application/json",
