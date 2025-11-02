@@ -1,7 +1,8 @@
-// types/user.ts
-export type User = {
+export interface User {
+  id: string;
   name: string;
   email: string;
-  role: "admin" | "moderator";
-  email_verified_at: string | null;
-};
+  role?: "trouper" | "admin" | "moderator";
+  avatar_url: string;
+  email_verified_at?: string;
+}
