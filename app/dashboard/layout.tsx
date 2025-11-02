@@ -31,8 +31,9 @@ export default function DashboardLayout({
           <Image
             src="/images/logo.png"
             alt="TroupeChat Logo"
-            width={60}
-            height={60}
+            width={90}
+            height={90}
+            className="object-contain"
           />
         </div>
 
@@ -49,36 +50,42 @@ export default function DashboardLayout({
             href="/dashboard/conversations"
             className="flex items-center space-x-2 text-gray-700 hover:text-blue-600"
           >
-            <Image
-              src="/images/Chat-icon.svg"
-              alt="Conversations"
-              width={20}
-              height={20}
-            />
+            <div className="relative w-8 h-8">
+              <Image
+                src="/images/Chat-icon.svg"
+                alt="Conversations"
+                fill
+                className="object-contain"
+              />
+            </div>
             <span>Conversations</span>
           </Link>
           <Link
             href="/dashboard/troupes"
             className="flex items-center space-x-2 text-gray-700 hover:text-blue-600"
           >
-            <Image
-              src="/images/Troupe-chat.svg"
-              alt="Troupes"
-              width={20}
-              height={20}
-            />
+            <div className="relative w-8 h-8">
+              <Image
+                src="/images/Troupe-chat.svg"
+                alt="Troupes"
+                fill
+                className="object-contain"
+              />
+            </div>
             <span>Troupes</span>
           </Link>
           <Link
             href="/dashboard/profile"
             className="flex items-center space-x-2 text-gray-700 hover:text-blue-600"
           >
-            <Image
-              src="/images/Profile.svg"
-              alt="Profile"
-              width={20}
-              height={20}
-            />
+            <div className="relative w-8 h-8">
+              <Image
+                src="/images/Profile.svg"
+                alt="Profile"
+                fill
+                className="object-contain"
+              />
+            </div>
             <span>Profile</span>
           </Link>
           <button

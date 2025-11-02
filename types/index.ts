@@ -7,6 +7,12 @@ export type { AuthContextType } from "./auth";
 // 🏘️ Troupe Type
 export type { Troupe } from "./troupe";
 
+// 💬 Conversation Type
+export type { Conversation } from "./conversation";
+
+// 📨 Message Type
+export type { Message } from "./message";
+
 // 💬 Chat Types (future)
 // export type { Message, ChatRoom } from './chat'; // if you add these later
 
